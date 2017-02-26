@@ -1,10 +1,10 @@
-let NZMap = require('./demos/nz_map'),
-    BerlinDemo = require('./demos/berlin'),
-    PointsLinearDemo = require('./demos/points_linear'),
-    PointsProjectionDemo = require('./demos/points_projection'),
-    PopulationDemo = require("./demos/berlin_population");
+let NZMap = require('./_demos/nz_map'),
+    BerlinDemo = require('./_demos/berlin'),
+    PointsLinearDemo = require('./_demos/points_linear'),
+    PointsProjectionDemo = require('./_demos/points_projection'),
+    PopulationDemo = require("./_demos/berlin_population");
 
-window.writeList = require("./demos/write_list");
+window.writeList = require("./_demos/write_list");
 
 module.exports = {
   start: function(){

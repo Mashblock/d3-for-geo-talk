@@ -6,7 +6,7 @@ var bespoke = require('bespoke'),
     bullets = require('bespoke-bullets'),
     scale = require('bespoke-scale'),
     voltaire = require('bespoke-theme-voltaire'),
-    Demos = require('./demos');
+    Demos = require('./_demos');
 
 var deck = bespoke.from('#presentation', [
   classes(),

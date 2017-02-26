@@ -23,7 +23,7 @@ configure :development do
 
   activate :external_pipeline,
     name: :browserify,
-    command: "node_modules/.bin/watchify source/javascripts/index.js -v -d -t babelify --outfile source/javascripts/index.pkg.js",
+    command: "node_modules/.bin/watchify source/javascripts/_index.js -v -d -t babelify --outfile source/javascripts/index.pkg.js",
     source: "source/javascripts",
     latency: 2
 end
@@ -40,10 +40,21 @@ end
 # end
 
 # Build-specific configuration
-configure :build do
-  # Minify CSS on build
-  # activate :minify_css
+set :build_dir, 'public'
 
+configure :build do
+  activate :external_pipeline,
+    name: :browserify,
+    command: "node_modules/.bin/browserify source/javascripts/_index.js -t babelify -o source/javascripts/index.pkg.js",
+    source: "source/javascripts"
+  # For example, change the Compass output style for deployment
+  activate :minify_css
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
+  # Enable cache buster
+  activate :asset_hash, ignore: %w(*.svg)
+  # Use relative URLs
+  activate :relative_assets
+  
+  activate :gzip
 end
