@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="515" height="356" viewBox="0, 0, 515, 356">
+  <g id="Layer_1" transform="translate(-142.5, -111.5)">
+    <path d="M317.5,467.5 C220.85,467.5 142.5,392.508 142.5,300 C142.5,207.492 220.85,132.5 317.5,132.5 C414.15,132.5 492.5,207.492 492.5,300 C492.5,392.508 414.15,467.5 317.5,467.5 z" fill="#7F91FF" fill-opacity="0.412"/>
+    <path d="M482.5,467.5 C385.85,467.5 307.5,392.508 307.5,300 C307.5,207.492 385.85,132.5 482.5,132.5 C579.15,132.5 657.5,207.492 657.5,300 C657.5,392.508 579.15,467.5 482.5,467.5 z" fill="#FFB67F" fill-opacity="0.43"/>
+    <text transform="matrix(1, 0, 0, 1, 239.788, 119)">
+      <tspan x="-19.711" y="3.5" font-family="OpenSans-Semibold" font-size="10" fill="#FFFFFF">Records</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 567.8, 119)">
+      <tspan x="-22.8" y="3.5" font-family="OpenSans-Semibold" font-size="10" fill="#FFFFFF">Elements</tspan>
+    </text>
+    <g>
+      <text transform="matrix(1, 0, 0, 1, 231.601, 297)">
+        <tspan x="-59.702" y="3.5" font-family="OpenSans-Semibold" font-size="10" fill="#FFFFFF">Create new elements for </tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 201.808, 311)">
+        <tspan x="-29.909" y="3.5" font-family="OpenSans-Semibold" font-size="10" fill="#FFFFFF">new records</tspan>
+      </text>
+    </g>
+    <g>
+      <text transform="matrix(1, 0, 0, 1, 390.399, 297)">
+        <tspan x="-38.164" y="3.5" font-family="OpenSans-Semibold" font-size="10" fill="#FFFFFF">Update existing </tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 390.399, 311)">
+        <tspan x="-22.89" y="3.5" font-family="OpenSans-Semibold" font-size="10" fill="#FFFFFF">elements</tspan>
+      </text>
+    </g>
+    <g>
+      <text transform="matrix(1, 0, 0, 1, 572.853, 297)">
+        <tspan x="-59.946" y="3.5" font-family="OpenSans-Semibold" font-size="10" fill="#FFFFFF">Remove old elements no </tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 573.817, 311)">
+        <tspan x="-58.981" y="3.5" font-family="OpenSans-Semibold" font-size="10" fill="#FFFFFF">longer in the records list</tspan>
+      </text>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 214.303, 333)">
+      <tspan x="-24.504" y="1.5" font-family="CourierNewPS-BoldMT" font-size="10" fill="#FFFFFF">.enter()</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 570.003, 333)">
+      <tspan x="-21.503" y="1.5" font-family="CourierNewPS-BoldMT" font-size="10" fill="#FFFFFF">.exit()</tspan>
+    </text>
+  </g>
+</svg>

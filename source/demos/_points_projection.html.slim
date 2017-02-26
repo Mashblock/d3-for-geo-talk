@@ -1,0 +1,27 @@
+.example
+  .example__code
+    pre.small.bullet
+      code.lang-javascript
+        | // Load the geojson with AJAX.
+          d3.json("/data/cafes.geojson", function(error, geojson){
+    pre.small.bullet
+      code.lang-javascript
+        |   // Define a projection and path builder.
+            var projection = d3.geoMercator()
+              .fitSize([300, 300], geojson);
+          
+            var path = d3.geoPath().projection(projection);
+    pre.small.bullet
+      code.lang-javascript
+        |   // Draw the points.
+            var svg = d3.select(document.body).append("svg");
+
+            var points = svg.selectAll("path.point") 
+              .data(geojson.features);
+
+            points.enter().append("path")
+              .attr("class", "point")
+              .attr("d", path);
+          });
+  .example__demo
+    #points_projection_demo.bullet

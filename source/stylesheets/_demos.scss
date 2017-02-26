@@ -1,0 +1,58 @@
+line.x-grid, 
+line.y-grid,
+path.graticule {
+  stroke: #333;
+}
+
+#nz_map_demo {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 20px;
+
+  path.land {
+    fill: #fff;
+    stroke: none;
+  }
+}
+
+#berlin_demo {
+  path.land {
+    fill: #fff;
+    fill-opacity: 0.5;
+    stroke: #fff;
+    stroke-width: 1;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    transition: 200ms;
+
+    &:hover {
+      fill-opacity: 0.8; 
+    }
+  }
+}
+
+#points_demo {
+  circle.point {
+    fill: #fff;
+  }
+}
+
+#population_demo {
+  path.land {
+    fill-opacity: 0.8;
+    stroke: #fff;
+    stroke-width: 0.5;
+    stroke-linejoin: round;
+    transition: 200ms;
+
+    &:hover {
+      fill-opacity: 1; 
+    }
+  }
+}
+
+#points_projection_demo {
+  path.point {
+    fill: #fff;
+  }
+}

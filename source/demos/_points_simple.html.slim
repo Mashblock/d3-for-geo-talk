@@ -1,0 +1,34 @@
+.example
+  .example__code
+    pre.small.bullet
+      code.lang-javascript
+        | var points = [[52.529911, 13.410728], [52.526772, 13.407635], 
+            [52.524434, 13.406601], [52.501944, 13.431986], 
+            [52.500799, 13.419489], [52.529528, 13.401792]];
+
+    pre.small.bullet
+      code.lang-javascript
+        | // Define scales for the x and y axis.
+          var xScale = d3.scaleLinear()
+            .domain([13.40, 13.44])
+            .range([0, 300]);
+
+          var yScale = d3.scaleLinear()
+            .domain([52.50, 52.54])
+            .range([300, 0]);
+    pre.small.bullet
+      code.lang-javascript
+        | // Draw points as circles.
+          var svg = d3.select(document.body).append("svg");
+
+          var points = svg.selectAll("circle.point")
+            .data(points)
+
+          points.enter().append("circle")
+            .attr("class", "point")
+            .attr("r", 5)
+            .attr("cx", (d)=> xScale(d[1]))
+            .attr("cy", (d)=> yScale(d[0]));
+
+  .example__demo
+    #points_demo.bullet

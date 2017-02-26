@@ -1,0 +1,152 @@
+article#presentation
+  section
+    h1 D3 for Geo
+    h3 GeoBerlin 22.02.2017
+
+  section
+    = image_tag 'cameron_prebble.jpeg', class: 'avatar'
+    h1 Cameron Prebble
+    h2 Rails and JavaScript Developer
+    h3 Coding - DataVis - Beer
+
+  section
+    #nz_map_demo
+    p From New Zealand*
+    p.small= "(* apologies for the accent)"
+
+  section(data-bespoke-backdrop="day-night")
+    .side-by-side
+      .side-by-side__item
+        = image_tag 'SAVEDO_logo_white.svg', width: 250
+      .side-by-side__item
+        = image_tag 'mashblock-nz-white.svg', width: 250
+  
+  section(data-bespoke-backdrop="image code")
+    h1 What is D3?
+
+  section(data-bespoke-backdrop="image charts")
+    markdown:
+      # Not a chart library
+        - No out-of-the-box visualisations (e.g. like in Highcharts).
+        - `d3.barChart(element, data)` does not exist.
+        - But there is libraries that use D3 to do easy charts (e.g. C3).
+    
+  section(data-bespoke-backdrop="image code")
+    h1 "JavaScript library for visualizing data using web standards."
+
+  
+  section
+    markdown:
+      ## Mike Bostock
+      - Former NY Times graphics editor.
+      - Also responsible for projects like:
+        - TopoJSON 
+        - Protovis 
+        - bl.ocks.org
+
+  section
+    h2 Manipulate DOM elements (HTML & SVG).
+    br
+    pre.small
+      code.lang-js
+        | d3.select("div.title")
+            .attr("class", "big")
+            .style("font-weight", "bold");
+      
+         
+          d3.select("svg").append("circle.location")
+            .attr("cx", 50)
+            .attr("cy", 100);
+
+  section
+    h2 Utilities to help represent data items visually.
+    br
+    pre.small
+      code.lang-js
+        | // Scales (e.g Linear scale for points on a scatter-plot).
+          var scale = d3.scaleLinear().domain([0, 10]).range([0, 300]);
+          
+          scale(5);
+          => 150
+
+          // Geometry builders (e.g. Line path builders, Pie chart builders);
+          var line = d3.line()
+            .x(function(d){ xScale(d[0])} )
+            .y(function(d){ yScale(d[1])} );
+          
+          line([[0, 0], [10, 20]]);
+          => "M0,0L300,100"
+        
+  section
+    h2 AJAX data loading (JSON, XML, CSV, etc...)
+    br
+    pre.small
+      code.lang-js
+        | d3.json("/data/people.json", function(error, data){
+            ...
+          });
+
+          d3.xml("/data/old_people.xml", function(error, data){
+            ...
+          });
+
+          d3.csv("/data/table.csv", function(error, data) {
+            ...
+          });
+
+  section
+    h2 Lots of utility functions.
+    br
+    pre.small
+      code.lang-js
+        | var data = [1,4,2,643,12];
+          d3.extent(data);
+          => [1, 642]
+
+          d3.sum(data);
+          => 662
+
+          d3.median(data);
+          => 4
+
+          var formatTime = d3.timeFormat("%B %d, %Y");
+          formatTime(new Date)
+          => 'February 22, 2017'
+
+  section
+    h2 Joining Data (enter, exit, and update).
+    br
+    = image_tag 'union.svg', width: 480
+    p.small https://bost.ocks.org/mike/join/
+  
+  section
+    = partial "demos/list_simple"
+
+  section
+    = partial "demos/points_simple"
+
+  section
+    markdown:
+      # D3 for Geo
+      - GeoJSON support.
+      - Define projections (location → pixel)
+      - Create SVG builders for a projection (geometry → svg path)
+      
+  section
+    = partial "demos/points_projection"
+
+  section
+    = partial "demos/berlin_simple"
+
+  section
+    = partial "demos/berlin_population"
+
+  section(data-bespoke-backdrop="image giant_head")
+    h1 Demos
+
+  section
+    .small
+    markdown:
+      - https://github.com/blackmad/neighborhoods/blob/master/berlin.geojson
+      - https://www.statistik-berlin-brandenburg.de/
+      - https://media.giphy.com/media/26DOs997h6fgsCthu/giphy.gif

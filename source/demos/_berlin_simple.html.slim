@@ -1,0 +1,26 @@
+.example
+  .example__code
+    pre.small.bullet
+      code.lang-javascript
+        | d3.json("/data/berlin.geojson", function(error, geojson){
+    pre.small.bullet
+      code.lang-javascript
+        |   // Define a projection and path builder.
+            var projection = d3.geoMercator()
+              .fitSize([300, 300], geojson);
+              
+            var path = d3.geoPath().projection(projection);
+    pre.small.bullet
+      code.lang-javascript
+        |   // Draw neighborhoods.
+            var svg = d3.select(document.body).append("svg");
+            
+            var neighborhoods = svg.selectAll("path.land")
+              .data(geojson.features);
+
+            neighborhoods.enter().append("path")
+              .attr("class", "land")
+              .attr("d", (d)=> path(d));
+          });
+  .example__demo
+    #berlin_demo.bullet

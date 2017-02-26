@@ -1,0 +1,36 @@
+.example
+  .example__code
+    pre.small.bullet
+      code.lang-javascript
+        | d3.json("/data/berlin.geojson", function(error, geojson){
+    pre.small.bullet
+      code.lang-javascript
+        |   // Define the projection and path builder.
+            var projection = d3.geoMercator()
+              .fitSize([300, 300], geojson);
+            var path = d3.geoPath().projection(projection);
+    pre.small.bullet
+      code.lang-javascript
+        |   // Define quantile color scale.
+            var colors = ["#f0f9e8", "#bae4bc", "#7bccc4", 
+              "#43a2ca", "#0868ac"];
+            var totals = geojson.features.map((d)=> d.properties.population);
+            
+            var colorScale = d3.scaleQuantile().range(colors).domain(totals);
+
+    pre.small.bullet
+      code.lang-javascript
+        |   // Draw neighborhoods.
+            var neighborhoods = d3.selectAll("path.land")
+              .data(geojson.features);
+
+            neighborhoods.enter().append("path")
+              .attr("class", "land")
+              .attr("d", path)
+              .attr("fill", (d)=> colorScale(d.properties.population))
+              .append("title")
+              .text((d)=> `${d.properties.name} - ${d.properties.population}`);
+          });
+    
+  .example__demo
+    #population_demo.bullet

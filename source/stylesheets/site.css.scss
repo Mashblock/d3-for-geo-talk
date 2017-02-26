@@ -1,0 +1,100 @@
+@import 'demos';
+
+img.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+pre[class*=language-] {
+  text-align: left;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  margin-bottom: 1em;
+  overflow: auto;
+  padding: 0;
+}
+
+code[class*=language-] {
+  line-height: 1;
+  text-shadow: none;
+}
+
+.example {
+  width: 720px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.example__code {
+  flex: 2;
+  text-align: left;
+}
+
+.example__demo {
+  flex: 1;
+  > * {
+    border: solid 1px #fff;
+  }
+}
+
+.side-by-side {
+  width: 720px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-by-side__item {
+  flex: 1;
+}
+
+.small {
+  font-size: 0.7rem;
+}
+
+.bespoke-backdrop-active {
+  &.mb-blue {
+    background: #3c5a7f;
+  }
+
+  &.savedo-blue {
+    background: #0957a4;
+  }
+
+  &.image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+  }
+
+  &.day-night {
+    background-image: linear-gradient(to right, #0957a4, #0957a4 50%, #3c5a7f 50%, #3c5a7f); 
+  }
+
+  &.giant_head {
+    background-image: url("/images/giant_head.gif")
+  }
+
+  &.code {
+    background-image: url('/images/code.png');
+  }
+
+  &.map {
+    background-image: url('/images/map.png');
+  }
+
+  &.charts {
+    background-image: url('/images/charts.png');
+  }
+
+  &.addresses {
+    background-image: url('/images/address-search.png');
+  }
+}
