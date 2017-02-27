@@ -14,7 +14,7 @@ class PointsProjection {
 
   fetch() {
     return new Promise((resolve, reject)=> {
-      d3.json("/data/cafes.geojson", (error, data)=>{
+      d3.json("data/cafes.geojson", (error, data)=>{
         if (error) return reject(error);
         this.geojson = data;
         resolve();

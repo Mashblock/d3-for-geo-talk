@@ -9,18 +9,6 @@ article#presentation
     h2 Rails and JavaScript Developer
     h3 Coding - DataVis - Beer
 
-  section
-    #nz_map_demo
-    p From New Zealand*
-    p.small= "(* apologies for the accent)"
-
-  section(data-bespoke-backdrop="day-night")
-    .side-by-side
-      .side-by-side__item
-        = image_tag 'SAVEDO_logo_white.svg', width: 250
-      .side-by-side__item
-        = image_tag 'mashblock-nz-white.svg', width: 250
-  
   section(data-bespoke-backdrop="image code")
     h1 What is D3?
 
@@ -28,7 +16,6 @@ article#presentation
     markdown:
       # Not a chart library
         - No out-of-the-box visualisations (e.g. like in Highcharts).
-        - `d3.barChart(element, data)` does not exist.
         - But there is libraries that use D3 to do easy charts (e.g. C3).
     
   section(data-bespoke-backdrop="image code")
@@ -141,12 +128,9 @@ article#presentation
   section
     = partial "demos/berlin_population"
 
-  section(data-bespoke-backdrop="image giant_head")
-    h1 Demos
-
   section
     .small
     markdown:
+      ### Credits:
       - https://github.com/blackmad/neighborhoods/blob/master/berlin.geojson
       - https://www.statistik-berlin-brandenburg.de/
-      - https://media.giphy.com/media/26DOs997h6fgsCthu/giphy.gif

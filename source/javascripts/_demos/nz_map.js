@@ -15,7 +15,7 @@ class NZMap {
 
   fetch() {
     return new Promise((resolve, reject)=>{
-      d3.json("/data/nz-coastline.topojson", (error, data)=>{
+      d3.json("data/nz-coastline.topojson", (error, data)=>{
         if (error) return reject(error);
         this.geojson = topojson.feature(data, data.objects["nz-coastline"]);
         resolve();

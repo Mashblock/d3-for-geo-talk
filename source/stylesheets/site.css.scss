@@ -24,6 +24,7 @@ code[class*=language-] {
 
 .example {
   width: 720px;
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -39,6 +40,17 @@ code[class*=language-] {
   > * {
     border: solid 1px #fff;
   }
+}
+
+.example__link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 8px;
+  text-decoration: none;
+  border: solid 1px #fff;
+  border-radius: 3px;
+  padding: 2px 5px;
 }
 
 .side-by-side {
