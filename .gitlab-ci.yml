@@ -9,6 +9,7 @@ pages:
   script:
   - apt-get update -yqqq
   - apt-get install -y nodejs npm
+  - ln -s /usr/bin/nodejs /usr/bin/node
   - bundle install --path vendor
   - npm install
   - bundle exec middleman build
